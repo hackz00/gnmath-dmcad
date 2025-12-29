@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>gn-math DMCA'd CDN</title>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --panel: #141414;
+            --border: #2a2a2a;
+            --text: #f2f2f2;
+            --muted: #b5b5b5;
+            --btn: #1d1d1d;
+            --btn-hover: #2a2a2a;
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px
+        }
+
+        h1 {
+            margin: 0 0 6px 0;
+            font-size: 28px
+        }
+
+        .lead {
+            margin: 0;
+            color: var(--muted)
+        }
+
+        .panel {
+            margin-top: 20px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius)
+        }
+
+        .file-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .file-row:last-child {
+            border-bottom: none
+        }
+
+        .file-left {
+            display: flex;
+            gap: 14px;
+            align-items: center
+        }
+
+        .icon {
+            width: 42px;
+            height: 30px;
+            background: #1f1f1f;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold
+        }
+
+        .title {
+            font-weight: bold
+        }
+
+        .meta {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 4px
+        }
+
+        .btn {
+            padding: 8px 14px;
+            background: var(--btn);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: bold
+        }
+
+        .btn:hover {
+            background: var(--btn-hover)
+        }
+
+        footer {
+            margin-top: 24px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .footer-buttons a {
+            margin-left: 10px;
+            padding: 6px 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            text-decoration: none
+        }
+
+        .footer-buttons a:hover {
+            background: #1e1e1e
+        }
+
+        @media(max-width:640px) {
+            .file-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <h1>GN-Math DMCA'd CDN</h1>
+        <p class="lead">
+            Static file host for gnmath removed games. Save the full HTML file with Ctrl+S if you want to
+            keep a copy.
+        </p>
+
+        <div class="panel" id="panel"></div>
+
+        <footer>
+            <div>Hosted on <strong>Github Pages</strong>. Built by <strong>hackz.exe</strong>.</div>
+            <div class="footer-buttons">
+                <a href="https://github.com/hackz00/gnmath-dmcad" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.google.com/search?q=laughing+emoji&udm=2" target="_blank" rel="noopener">DMCA</a>
+                <a href="https://gn-math-t.github.io/" target="_blank" rel="noopener">GN-Math</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const ITEMS = [
+            { name: "Grand Theft Auto: Vice City", file: "GrandTheftAuto-ViceCity.html" },
+            { name: "Balatro", file: "Balatro.html" },
+            { name: "Undertale", file: "Undertale.html" },
+            { name: "Deltarune", file: "Deltarune.html" },
+            { name: "Drive Mad", file: "DriveMad.html" },
+            { name: "Hollow Night", file: "HollowNight.html" }
+        ];
+
+        const panel = document.getElementById("panel");
+
+        ITEMS.forEach((g, i) => {
+            panel.innerHTML += `
+    <div class="file-row">
+      <div class="file-left">
+        <div class="icon">${i + 1}</div>
+        <div>
+          <div class="title">${g.name}</div>
+          <div class="meta">${g.file}</div>
+        </div>
+      </div>
+      <a class="btn" href="preview.html?file=${encodeURIComponent(g.file)}">play</a>
+    </div>
+  `;
+        });
+    </script>
+
+</body>
+
+</html>
